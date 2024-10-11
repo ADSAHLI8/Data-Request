@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
+// Create new Schema
 const requestSchema = new Schema({
     Entity : Array,
     Country : Array,
@@ -23,4 +24,5 @@ const requestSchema = new Schema({
 
 },{timestamps : true})
 
+// Export Schema
 module.exports = mongoose.model('Request',requestSchema)

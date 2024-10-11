@@ -15,7 +15,7 @@ this is a full-stack web application built with React on the frontend and a back
 ## Installation
 
 ### Prerequisites
-
+- Redux
 - Node.js
 - MongoDB Atlas account (with a cluster set up)
 
@@ -23,12 +23,12 @@ this is a full-stack web application built with React on the frontend and a back
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/myapp.git
+   git clone https://github.com/yourusername/Data_Request_Project.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd Data Request Project
+   cd Data_Request_Project
    ```
 
 3. Install the dependencies:
@@ -66,16 +66,16 @@ Data Request Project/
 │   ├── server.js
 |   ├── .env
 |   ├── package.json
-├── public/
-│   ├── index.html
-├── src/
-│   ├── css/
-│   ├── data/
-│   ├── features/
-│   ├── store/
-│   ├── App.js
-│   ├── App.css
-│   └──  index.js
+├── frontend/
+|   ├── public/
+|   ├── src/
+│   |    ├──── css/
+│   |    ├── data/
+│   |    ├── features/
+│   |    ├── store/
+│   |    ├── App.js
+│   |    ├── App.css
+│   |    └──  index.js
 ├── package.json
 └── README.md
 ```
@@ -124,8 +124,6 @@ The backend is built using Node.js and Express, connected to MongoDB Atlas. It h
 
 If you would like to contribute to the project, feel free to open a pull request or report an issue in the GitHub repository.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 

@@ -3,7 +3,7 @@ import DataRequestReducer from '../features/DataRequest/dataRequestSlice'
 import InsertionConditionReducer from '../features/InsertionCondition/insertionConditionSlice'
 import {requestApi} from '../features/requestApi'
 
-
+ // Create a store 
  const store = configureStore({
     reducer: {
         dataRequest : DataRequestReducer,
