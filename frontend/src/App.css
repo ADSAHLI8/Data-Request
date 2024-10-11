@@ -1,0 +1,56 @@
+body {
+    background:  #0891b2;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    font-family: "Roboto", sans-serif;
+}
+
+
+
+.p-tabview .p-tabview-panels{
+    background: none;
+}
+.p-tabview .p-tabview-nav{
+    background: none;
+    display: none;
+}
+
+.p-tabview .p-tabview-nav li .p-tabview-nav-link{
+    background: none;
+}
+.full-container{
+    margin: 5% 25%;
+    padding: 2%;
+    padding-bottom: 0%;
+    padding-top: 0%;
+    background-color: #f2f2f2d6;
+    border-radius: 20px;
+}
+div.p-card:nth-child(1) > div:nth-child(1){
+    background: none;
+    margin-bottom: 1%;
+    border-radius: 8px;
+    padding-bottom: 0%;
+}
+div.p-card:nth-child(1){
+    border-radius: 8px;
+    background: none;
+}
+div.p-card:nth-child(2) > div:nth-child(1){
+    background: none;
+    margin-bottom: 1%;
+    border-radius: 8px;
+    padding-bottom: 0%;
+
+}
+div.p-card:nth-child(2){
+    background: none;
+    border-radius: 8px;
+}
+div.p-card:nth-child(2) > div:nth-child(1) > div:nth-child(2){
+    padding: 1%;
+    padding-left: 0%;
+}
+.p-tabview .p-tabview-panels{
+    padding-top: 0%;
+}

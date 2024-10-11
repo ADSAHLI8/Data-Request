@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: features/DataRequest/DataRequest.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: features/DataRequest/DataRequest.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from 'react'
+import { SelectButton } from 'primereact/selectbutton';
+import entityOptions from "../../data/entityOptions";
+import countryOptions from "../../data/countriesOptions";
+import ispOptions from '../../data/ispOptions';
+import CreatableSelect from 'react-select/creatable';
+import { InputText } from "primereact/inputtext";
+import { InputSwitch } from "primereact/inputswitch";
+import { Card } from 'primereact/card';
+import countries2Options from '../../data/countries2Options';
+import "../../css/dataRequest.css"
+import { useDispatch, useSelector } from 'react-redux';
+import {changeEntity,changeCountry,changeCountry2,changeISP,changeDomain,changeDashboardName,changeIs_Amazon,
+  changeIs_Paypal,changeIs_Fedex,changeIs_Insurance,changeIs_Hardbounce} from './dataRequestSlice'
+
+/**
+ * @component
+ * 
+ * @returns{JSX.Element} 
+ */
+
+
+const DataRequest = () => {
+  /** Defining a state for each form element */
+   const Entity = useSelector((state)=>state.dataRequest.Entity)
+   const Country = useSelector((state)=>state.dataRequest.Country)
+   const Country2 = useSelector((state)=>state.dataRequest.Country2)
+   const ISP = useSelector((state)=>state.dataRequest.ISP)
+   const Domain = useSelector((state)=>state.dataRequest.Domain)
+   const DashboardName = useSelector((state)=>state.dataRequest.DashboardName)
+   const Is_Amazon = useSelector((state)=>state.dataRequest.Is_Amazon)
+   const Is_Paypal = useSelector((state)=>state.dataRequest.Is_Paypal)
+   const Is_Fedex = useSelector((state)=>state.dataRequest.Is_Fedex)
+   const Is_Insurance = useSelector((state)=>state.dataRequest.Is_Insurance)
+   const Is_Hardbounce = useSelector((state)=>state.dataRequest.Is_Hardbounce)
+   /** Calling use dispatch */
+   const dispatch = useDispatch()
+   /** Return data request Form */
+  return (
+    &lt;div className='r'>
+      &lt;Card title="Entity">
+            &lt;SelectButton value={Entity} onChange={(e)=>dispatch(changeEntity(e.target.value))} optionLabel="name" name='entity' options={entityOptions} multiple />
+      &lt;/Card>
+      &lt;Card title="Country">
+    &lt;div className="card flex justify-content-center">
+            &lt;SelectButton value={Country} onChange={(e)=>dispatch(changeCountry(e.target.value))} optionLabel="name" className='countries' name='country'  options={countryOptions} multiple />
+    &lt;/div>
+    &lt;div className="select-group">
+        &lt;CreatableSelect
+          isMulti
+          name="country2"
+          className="select"
+          options={countries2Options}
+          classNamePrefix="select"
+          placeholder = "Select Another Country"
+          onChange={(e)=>dispatch(changeCountry2(e))}
+          value={Country2}
+          />
+    &lt;/div>
+      &lt;/Card>
+      &lt;div className='cards'>
+
+      &lt;Card>
+    &lt;div className="label-inline" id='isp-label'>
+        ISP
+    &lt;/div>
+        &lt;CreatableSelect
+          isMulti
+          id='isp-select'
+          name="isp"
+          className="select"
+          options={ispOptions}
+          classNamePrefix="select"
+          placeholder = "Select ISP"
+          onChange={(e)=>dispatch(changeISP(e))}
+          value={ISP}
+          />
+    &lt;div className="label-inline " id='domain-label' >
+        Domain
+    &lt;/div>
+        &lt;InputText 
+          id='domain-input'
+          name="domain"
+          className="input"
+          placeholder = "Input Domain"
+          onChange={(e)=>dispatch(changeDomain(e.target.value))}
+          value={Domain}
+          />
+    &lt;div className="label" id='dashboard-name-label'>
+        Dashboard Name
+    &lt;/div>
+      &lt;InputText 
+      id='dashboard-name-input'
+      className='input'
+      value={DashboardName} 
+      name="dashboardName"
+      placeholder = "Input Dashboard Name"
+      onChange={(e)=>dispatch(changeDashboardName(e.target.value))} />
+      &lt;/Card>
+    &lt;Card >
+      &lt;div className='switch'>
+        &lt;div className="switch-label" id='isAmazon'>
+         Is_Amazon
+        &lt;/div>
+        &lt;InputSwitch checked={Is_Amazon} name ="isAmazon" className='switch-input'  onChange={(e)=>dispatch(changeIs_Amazon(e.target.value))} />
+      &lt;/div>
+      &lt;div className='switch'>
+       &lt;div className="switch-label" id='isPaypal'>
+        Is_Paypal
+       &lt;/div>
+        &lt;InputSwitch checked={Is_Paypal} name ="isPaypal" className='switch-input' onChange={(e)=>dispatch(changeIs_Paypal(e.target.value))} />
+      &lt;/div>
+      &lt;div className='switch'>
+       &lt;div className="switch-label" id='isFedex'>
+        Is_Fedex
+      &lt;/div>
+        &lt;InputSwitch checked={Is_Fedex} name ="isFedex" className='switch-input' onChange={(e)=>dispatch(changeIs_Fedex(e.target.value))} />
+      &lt;/div>
+      &lt;div className="switch">
+       &lt;div className="switch-label" id='isInsurance'>
+        Is_Insurance
+      &lt;/div>
+        &lt;InputSwitch checked={Is_Insurance} name ="isInsurance" className='switch-input' onChange={(e)=>dispatch(changeIs_Insurance(e.target.value))} />
+      &lt;/div>
+      &lt;div className="switch">
+       &lt;div className="switch-label" id='isHardbounce'>
+        Is_Hardbounce
+      &lt;/div>
+      &lt;InputSwitch checked={Is_Hardbounce} name ="isHardbounce" className='switch-input' onChange={(e)=>dispatch(changeIs_Hardbounce(e.target.value))} />
+      &lt;/div>
+        &lt;/Card>      
+      &lt;/div>
+        
+    &lt;/div>
+  )
+}
+/** Export Component */
+export default DataRequest</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#DataRequest">DataRequest</a></li><li><a href="global.html#InsertionCondition">InsertionCondition</a></li><li><a href="global.html#Submit">Submit</a></li><li><a href="global.html#dataRequestSlice">dataRequestSlice</a></li><li><a href="global.html#initialState">initialState</a></li><li><a href="global.html#insertionConditionSlice">insertionConditionSlice</a></li><li><a href="global.html#root">root</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.3</a> on Tue Oct 08 2024 15:08:37 GMT+0100 (UTC+01:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
