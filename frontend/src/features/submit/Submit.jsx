@@ -92,7 +92,7 @@ const Submit = () => {
     <div>
         <Button label="Reset" className='buttons' onClick={() => dispatch(reset())} />
         <Button label="Submit" className='buttons' onClick={handleSubmit} />
-            <Dialog header={headerContent} visible={visible} className='modal' style={{ width: '30%' }} onHide={() => {if (!visible) return; setVisible(false); }} footer={footerContent}>
+            <Dialog header={headerContent} visible={visible} className='modal' style={{ width: '30%' }} onHide={() =>  setVisible(false) } footer={footerContent}>
                 <div className='container'>
                 <section id='copy-text'>
                     <p className='message-header'>

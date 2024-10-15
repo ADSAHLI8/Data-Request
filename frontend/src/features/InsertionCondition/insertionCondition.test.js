@@ -2,6 +2,7 @@ import { Provider } from "react-redux";
 import InsertionCondition from "./InsertionCondition";
 import { render,screen } from "@testing-library/react";
 import '@testing-library/jest-dom'; // For matchers like 'toBeInTheDocument'
+import renderer from 'react-test-renderer';
 import store from "../../store/store";
 import { PrimeReactProvider } from "primereact/api";
 
@@ -55,5 +56,11 @@ describe('Insertion Condition',() =>{
         const selectElement= screen.getByPlaceholderText('Any additional information...')
         expect(selectElement).toBeInTheDocument()
     })
+    it('should render correctly',async () => {
+        const component = renderer.create(<MockedInsertionCondition/>);
+        let tree = component.toJSON()
+        expect(tree).toMatchSnapshot()
+    })
+
 
 })

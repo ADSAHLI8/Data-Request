@@ -1,8 +1,9 @@
 import { Provider } from "react-redux";
-import DataRequest from "./DataRequest";
 import { render,screen } from "@testing-library/react";
 import '@testing-library/jest-dom'; // For matchers like 'toBeInTheDocument'
 import store from "../../store/store";
+import renderer from 'react-test-renderer';
+import DataRequest from "./DataRequest";
 import { PrimeReactProvider } from "primereact/api";
 
  const MockedDataRequest = () => {
@@ -69,5 +70,10 @@ describe('Data Request',() =>{
         const switchElements= screen.getAllByRole('switch')
         expect(switchElements.length).toBe(5)
     })
-
+    it('should render correctly',async () => {
+        const component = renderer.create(<MockedDataRequest/>);
+        let tree = component.toJSON()
+        expect(tree).toMatchSnapshot()
+    })
+   
 })
