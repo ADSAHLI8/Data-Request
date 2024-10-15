@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Insertion Condition should render correctly 1`] = `
+<div
+  className=""
+>
+  <div
+    className="line"
+  >
+    <div
+      className="isp-domain"
+    >
+      <div
+        className="label"
+        id="isp2-label"
+      >
+        ISP
+      </div>
+      <div
+        className="label"
+        id="provider-label"
+      >
+        Provider
+      </div>
+    </div>
+    <div
+      className="isp-domain"
+    >
+      <input
+        className="input p-inputtext p-component"
+        data-pc-name="inputtext"
+        data-pc-section="root"
+        id="isp2-input"
+        name="isp2"
+        onBeforeInput={[Function]}
+        onChange={[Function]}
+        onInput={[Function]}
+        onKeyDown={[Function]}
+        onPaste={[Function]}
+        placeholder="Input ISP"
+        value=""
+      />
+      <input
+        className="input p-inputtext p-component"
+        data-pc-name="inputtext"
+        data-pc-section="root"
+        id="provider-input"
+        name="provider"
+        onBeforeInput={[Function]}
+        onChange={[Function]}
+        onInput={[Function]}
+        onKeyDown={[Function]}
+        onPaste={[Function]}
+        placeholder="Input Provider"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    className="line"
+  >
+    <div
+      className="isp-domain"
+    >
+      <div
+        className="label"
+        id="filter-label"
+      >
+        Filter
+      </div>
+      <div
+        className="label"
+        id="list-name-label"
+      >
+        List Name
+      </div>
+    </div>
+    <div
+      className="isp-domain"
+    >
+      <div
+        className="p-selectbutton p-button-group p-component"
+        data-pc-name="selectbutton"
+        data-pc-section="root"
+        id="filter-select"
+        name="filter"
+        role="group"
+        style={Object {}}
+      >
+        <div
+          aria-disabled={false}
+          aria-label="Enabled"
+          aria-pressed={false}
+          className="p-button p-component"
+          data-pc-section="button"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+          tabIndex="0"
+        >
+          <span
+            className="p-button-label p-c"
+            data-pc-section="label"
+          >
+            Enabled
+          </span>
+        </div>
+        <div
+          aria-disabled={false}
+          aria-label="Disabled"
+          aria-pressed={false}
+          className="p-button p-component"
+          data-pc-section="button"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+          tabIndex="-1"
+        >
+          <span
+            className="p-button-label p-c"
+            data-pc-section="label"
+          >
+            Disabled
+          </span>
+        </div>
+        <div
+          aria-disabled={false}
+          aria-label="Enabled (DUPS)"
+          aria-pressed={false}
+          className="p-button p-component"
+          data-pc-section="button"
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          role="button"
+          tabIndex="-1"
+        >
+          <span
+            className="p-button-label p-c"
+            data-pc-section="label"
+          >
+            Enabled (DUPS)
+          </span>
+        </div>
+      </div>
+      <input
+        className="input p-inputtext p-component"
+        data-pc-name="inputtext"
+        data-pc-section="root"
+        id="list-name-input"
+        name="listName"
+        onBeforeInput={[Function]}
+        onChange={[Function]}
+        onInput={[Function]}
+        onKeyDown={[Function]}
+        onPaste={[Function]}
+        placeholder="Input List Name"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    className="label"
+    id="text-area-label"
+  >
+    Additional Information
+  </div>
+  <textarea
+    className="text-area p-inputtextarea p-inputtext p-component text-area"
+    cols={70}
+    data-pc-name="inputtextarea"
+    data-pc-section="root"
+    keyFilter="int"
+    name="additionalInformation"
+    onBeforeInput={[Function]}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    onInput={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onPaste={[Function]}
+    placeholder="Any additional information..."
+    rows={6}
+    value=""
+  />
+</div>
+`;
